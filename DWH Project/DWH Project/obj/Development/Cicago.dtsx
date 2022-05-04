@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Cicago"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{BB2FFF5D-0B30-4A51-B270-A486F220E11E}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{003DB64D-C7CD-4B57-B000-E582929CA94E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -890,6 +890,204 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{357E2A7D-65C9-4784-B374-20AFEF4BFA40}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="A:\FCAI-HU\Four Stage\Second Term\DWH\Project\chicago.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{374674CC-B8A9-4BA8-9F47-DC248C05CDC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start Time"
+              DTS:DTSID="{87287029-F733-4204-9D78-4D22D8E5B0A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End Time"
+              DTS:DTSID="{840B534C-584D-445F-86E5-BCB3CA809856}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Trip Duration"
+              DTS:DTSID="{354E3572-BC28-4601-8E72-E069F2DFEDD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start Station"
+              DTS:DTSID="{3588ECE3-4D35-47AE-9BE5-2D6B92EE4FD5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End Station"
+              DTS:DTSID="{FEC9864B-8ACC-4D69-9907-59053536AA52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="User Type"
+              DTS:DTSID="{84EE16CF-16A6-461C-B895-9FF5777F4462}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{66314581-E5D9-47FA-806A-8A59FFA48FCC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Birth Year"
+              DTS:DTSID="{77D87238-06DA-4DA6-8E72-208697441D0A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{48B12E05-D782-4D77-B093-45157B05FCB5}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="A:\FCAI-HU\Four Stage\Second Term\DWH\Project\chicago.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{CB7361EB-0CE0-4D54-9EA4-E64591C5E5A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start Time"
+              DTS:DTSID="{9AD23CD8-F6F2-45DA-B3E1-22FD13CA4447}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End Time"
+              DTS:DTSID="{7414A828-69F9-486B-80B2-04F1FFA6D392}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Trip Duration"
+              DTS:DTSID="{5F9D6A2F-EF5C-4EAF-9397-27FF21375835}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start Station"
+              DTS:DTSID="{BED299E5-6CD5-480D-AC4B-0C6FC5879F68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End Station"
+              DTS:DTSID="{E2E2141A-7B83-4CD0-87F8-303A22075A8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="User Type"
+              DTS:DTSID="{C84DDA7F-FEA2-4F6A-8299-9810C2FD1573}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{7E3214A8-0CFB-4CB7-9917-1EA81E66B2FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Birth Year"
+              DTS:DTSID="{241295DD-230C-47C7-AD9A-E62E5829FB3A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
@@ -921,19 +1119,19 @@
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH\Conditional Split 1.Inputs[Conditional Split Input].Columns[Start Time]"
+                      refId="Package\DWH\Conditional Split 1.Inputs[Conditional Split Input].Columns[Copy of Start Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]" />
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]" />
                     <inputColumn
-                      refId="Package\DWH\Conditional Split 1.Inputs[Conditional Split Input].Columns[End Time]"
+                      refId="Package\DWH\Conditional Split 1.Inputs[Conditional Split Input].Columns[Copy of End Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]" />
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -953,13 +1151,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]}) == 8 &amp;&amp; [LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]}) == 8</property>
+                      name="Expression">[LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]}) == 8 &amp;&amp; [LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]}) == 8</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">LEN([Start Time]) == 8 &amp;&amp; LEN([End Time]) == 8</property>
+                      name="FriendlyExpression">LEN([Copy of Start Time]) == 8 &amp;&amp; LEN([Copy of End Time]) == 8</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -981,13 +1179,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]}) == 9 &amp;&amp; [LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]}) == 9</property>
+                      name="Expression">[LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]}) == 9 &amp;&amp; [LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]}) == 9</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">LEN([Start Time]) == 9 &amp;&amp; LEN([End Time]) == 9</property>
+                      name="FriendlyExpression">LEN([Copy of Start Time]) == 9 &amp;&amp; LEN([Copy of End Time]) == 9</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -1009,13 +1207,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]}) == 8 &amp;&amp; [LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]}) == 9</property>
+                      name="Expression">[LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]}) == 8 &amp;&amp; [LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]}) == 9</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">LEN([Start Time]) == 8 &amp;&amp; LEN([End Time]) == 9</property>
+                      name="FriendlyExpression">LEN([Copy of Start Time]) == 8 &amp;&amp; LEN([Copy of End Time]) == 9</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -1037,13 +1235,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]}) == 9 &amp;&amp; [LEN](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]}) == 8</property>
+                      name="Expression">[LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]}) == 9 &amp;&amp; [LEN](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]}) == 8</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">LEN([Start Time]) == 9 &amp;&amp; LEN([End Time]) == 8</property>
+                      name="FriendlyExpression">LEN([Copy of Start Time]) == 9 &amp;&amp; LEN([Copy of End Time]) == 8</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -1103,10 +1301,12 @@
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH\Conditional Split For Trip Duration.Inputs[Conditional Split Input].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]" />
+                      refId="Package\DWH\Conditional Split For Trip Duration.Inputs[Conditional Split Input].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1126,13 +1326,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]} &gt; 600</property>
+                      name="Expression">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]} &gt; 10</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">[Trip Duration] &gt; 600</property>
+                      name="FriendlyExpression">[Trip Duration min] &gt; 10</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -1154,13 +1354,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]} &lt;= 600</property>
+                      name="Expression">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]} &lt;= 10</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">[Trip Duration] &lt;= 600</property>
+                      name="FriendlyExpression">[Trip Duration min] &lt;= 10</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -1207,6 +1407,343 @@
               </outputs>
             </component>
             <component
+              refId="Package\DWH\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Id"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[Start Station]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start Station"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Station]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[End Station]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End Station"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Station]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[User Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="User Type"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[User Type]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[Birth Year]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Birth Year"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Birth Year]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[state]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="state"
+                      lineageId="Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[state]" />
+                    <inputColumn
+                      refId="Package\DWH\Data Conversion.Inputs[Data Conversion Input].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      lineageId="Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[Trip Duration min]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DWH\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]"
+                      name="Copy of Id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]"
+                      name="Copy of Start Time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]"
+                      name="Copy of End Time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Station]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Station]"
+                      name="Copy of Start Station"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Station]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Station]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Station]"
+                      name="Copy of End Station"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Station]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of User Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of User Type]"
+                      name="Copy of User Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[User Type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
+                      name="Copy of Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birth Year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birth Year]"
+                      name="Copy of Birth Year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Birth Year]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]"
+                      name="Copy of state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[state]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Trip Duration min]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Trip Duration min]"
+                      name="Copy of Trip Duration min"
+                      precision="26"
+                      scale="6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[Trip Duration min]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DWH\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DWH\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DWH\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DWH\Date start 8 end 8"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1235,13 +1772,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},5,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},5,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([Start Time],1,1) + "-0" + SUBSTRING([Start Time],3,1) + "-" + SUBSTRING([Start Time],5,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of Start Time],1,1) + "-0" + SUBSTRING([Copy of Start Time],3,1) + "-" + SUBSTRING([Copy of Start Time],5,4)</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1260,15 +1797,29 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},5,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},5,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([End Time],1,1) + "-0" + SUBSTRING([End Time],3,1) + "-" + SUBSTRING([End Time],5,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of End Time],1,1) + "-0" + SUBSTRING([Copy of End Time],3,1) + "-" + SUBSTRING([Copy of End Time],5,4)</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Date start 8 end 8.Inputs[Derived Column Input].Columns[Copy of Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]" />
+                    <inputColumn
+                      refId="Package\DWH\Date start 8 end 8.Inputs[Derived Column Input].Columns[Copy of End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1336,13 +1887,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},5,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},5,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([Start Time],1,1) + "-0" + SUBSTRING([Start Time],3,1) + "-" + SUBSTRING([Start Time],5,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of Start Time],1,1) + "-0" + SUBSTRING([Copy of Start Time],3,1) + "-" + SUBSTRING([Copy of Start Time],5,4)</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1361,15 +1912,29 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},6,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},6,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([End Time],1,1) + "-" + SUBSTRING([End Time],3,2) + "-" + SUBSTRING([End Time],6,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of End Time],1,1) + "-" + SUBSTRING([Copy of End Time],3,2) + "-" + SUBSTRING([Copy of End Time],6,4)</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Date start 8 end 9.Inputs[Derived Column Input].Columns[Copy of Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]" />
+                    <inputColumn
+                      refId="Package\DWH\Date start 8 end 9.Inputs[Derived Column Input].Columns[Copy of End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1437,13 +2002,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},6,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},6,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([Start Time],1,1) + "-" + SUBSTRING([Start Time],3,2) + "-" + SUBSTRING([Start Time],6,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of Start Time],1,1) + "-" + SUBSTRING([Copy of Start Time],3,2) + "-" + SUBSTRING([Copy of Start Time],6,4)</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1462,15 +2027,29 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},5,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},1,1) + "-0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},3,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},5,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([End Time],1,1) + "-0" + SUBSTRING([End Time],3,1) + "-" + SUBSTRING([End Time],5,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of End Time],1,1) + "-0" + SUBSTRING([Copy of End Time],3,1) + "-" + SUBSTRING([Copy of End Time],5,4)</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Date start 9 end 8.Inputs[Derived Column Input].Columns[Copy of Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]" />
+                    <inputColumn
+                      refId="Package\DWH\Date start 9 end 8.Inputs[Derived Column Input].Columns[Copy of End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1538,13 +2117,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]},6,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]},6,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([Start Time],1,1) + "-" + SUBSTRING([Start Time],3,2) + "-" + SUBSTRING([Start Time],6,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of Start Time],1,1) + "-" + SUBSTRING([Copy of Start Time],3,2) + "-" + SUBSTRING([Copy of Start Time],6,4)</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1563,15 +2142,29 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]},6,4)</property>
+                          name="Expression">"0" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},1,1) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},3,2) + "-" + [SUBSTRING](#{Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]},6,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"0" + SUBSTRING([End Time],1,1) + "-" + SUBSTRING([End Time],3,2) + "-" + SUBSTRING([End Time],6,4)</property>
+                          name="FriendlyExpression">"0" + SUBSTRING([Copy of End Time],1,1) + "-" + SUBSTRING([Copy of End Time],3,2) + "-" + SUBSTRING([Copy of End Time],6,4)</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Date start 9 end 9.Inputs[Derived Column Input].Columns[Copy of Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]" />
+                    <inputColumn
+                      refId="Package\DWH\Date start 9 end 9.Inputs[Derived Column Input].Columns[Copy of End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1673,6 +2266,11 @@
                           name="FriendlyExpression">TRIM(LEFT([End Time],9))</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Derived Column 1.Inputs[Derived Column Input].Columns[Trip Duration]"
+                      cachedDataType="i8"
+                      cachedName="Trip Duration"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Trip Duration]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1684,6 +2282,55 @@
                   exclusionGroup="1"
                   name="Derived Column Output"
                   synchronousInputId="Package\DWH\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[state]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="7"
+                      lineageId="Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Chicago"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Chicago"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[Trip Duration min]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DWH\Derived Column 1.Outputs[Derived Column Output].Columns[Trip Duration min]"
+                      name="Trip Duration min"
+                      precision="26"
+                      scale="6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Trip Duration]} / 60.0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Trip Duration] / 60.0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -1899,7 +2546,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Duration doesn't exceed 10 Mins]</property>
+                  name="OpenRowset">[Bike Share Duration doesn't exceed 5 Mins]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1980,12 +2627,6 @@
                       externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Time]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]" />
-                    <inputColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2019,9 +2660,7 @@
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Gender]" />
                     <inputColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Birth Year]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Birth Year"
                       externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]" />
@@ -2052,6 +2691,22 @@
                       cachedName="REVERSEEnd Station"
                       externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
                       lineageId="Package\DWH\Derived Column For String Functions.Outputs[Derived Column Output].Columns[REVERSEEnd Station]" />
+                    <inputColumn
+                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]" />
+                    <inputColumn
+                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2074,36 +2729,32 @@
                       length="50"
                       name="End Time" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      dataType="i8"
-                      name="Trip Duration" />
-                    <externalMetadataColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Start Station" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="End Station" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="User Type" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
-                      dataType="i8"
+                      dataType="i4"
                       name="Birth Year" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
@@ -2124,6 +2775,18 @@
                       dataType="wstr"
                       length="255"
                       name="REVERSEEnd Station" />
+                    <externalMetadataColumn
+                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      dataType="numeric"
+                      name="Trip Duration min"
+                      precision="26"
+                      scale="6" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2168,7 +2831,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Duration exceed 10 Mins]</property>
+                  name="OpenRowset">[Bike Share Duration exceed 10 Mins]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2249,12 +2912,6 @@
                       externalMetadataColumnId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Time]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]" />
                     <inputColumn
-                      refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      externalMetadataColumnId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]" />
-                    <inputColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2288,9 +2945,7 @@
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Gender]" />
                     <inputColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Birth Year]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Birth Year"
                       externalMetadataColumnId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]" />
@@ -2321,6 +2976,22 @@
                       cachedName="REVERSEEnd Station"
                       externalMetadataColumnId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
                       lineageId="Package\DWH\Derived Column For String Functions.Outputs[Derived Column Output].Columns[REVERSEEnd Station]" />
+                    <inputColumn
+                      refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]" />
+                    <inputColumn
+                      refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2343,36 +3014,32 @@
                       length="50"
                       name="End Time" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      dataType="i8"
-                      name="Trip Duration" />
-                    <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Start Station" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="End Station" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="User Type" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
-                      dataType="i8"
+                      dataType="i4"
                       name="Birth Year" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
@@ -2393,6 +3060,18 @@
                       dataType="wstr"
                       length="255"
                       name="REVERSEEnd Station" />
+                    <externalMetadataColumn
+                      refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      dataType="numeric"
+                      name="Trip Duration min"
+                      precision="26"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="State" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2434,7 +3113,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
+                  name="RetainNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
@@ -2443,8 +3122,8 @@
               <connections>
                 <connection
                   refId="Package\DWH\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Chicago Flat file]"
-                  connectionManagerRefId="Package.ConnectionManagers[Chicago Flat file]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 3]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -2671,19 +3350,19 @@
                       name="End Time" />
                     <externalMetadataColumn
                       refId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Trip Duration]"
-                      dataType="i4"
+                      dataType="r4"
                       name="Trip Duration" />
                     <externalMetadataColumn
                       refId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Start Station]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Start Station" />
                     <externalMetadataColumn
                       refId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[End Station]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="End Station" />
                     <externalMetadataColumn
                       refId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[User Type]"
@@ -2699,7 +3378,7 @@
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Birth Year]"
-                      dataType="i2"
+                      dataType="i4"
                       name="Birth Year" />
                   </externalMetadataColumns>
                 </output>
@@ -2745,12 +3424,12 @@
                   name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Id]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Id"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Id]">
+                      cachedName="Copy of Id"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]">
                       <properties>
                         <property
                           containsID="true"
@@ -2760,12 +3439,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Start Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Start Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -2775,12 +3454,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[End Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of End Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -2790,25 +3469,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Trip Duration]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Start Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Station]">
+                      cachedName="Copy of Start Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -2818,12 +3484,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[End Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of End Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Station]">
+                      cachedName="Copy of End Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -2833,12 +3499,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[User Type]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of User Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="User Type"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[User Type]">
+                      cachedName="Copy of User Type"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of User Type]">
                       <properties>
                         <property
                           containsID="true"
@@ -2848,12 +3514,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Gender]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Gender"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]">
+                      cachedName="Copy of Gender"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
                         <property
                           containsID="true"
@@ -2863,18 +3529,46 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Birth Year]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Birth Year"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Birth Year]">
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Birth Year]"
+                      cachedDataType="i4"
+                      cachedName="Copy of Birth Year"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birth Year]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of state"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2886,12 +3580,12 @@
                   name="Union All Input 2">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Id]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Id"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Id]">
+                      cachedName="Copy of Id"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]">
                       <properties>
                         <property
                           containsID="true"
@@ -2901,12 +3595,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Start Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Start Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -2916,12 +3610,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[End Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of End Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -2931,25 +3625,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Trip Duration]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Start Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Station]">
+                      cachedName="Copy of Start Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -2959,12 +3640,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[End Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of End Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Station]">
+                      cachedName="Copy of End Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -2974,12 +3655,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[User Type]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of User Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="User Type"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[User Type]">
+                      cachedName="Copy of User Type"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of User Type]">
                       <properties>
                         <property
                           containsID="true"
@@ -2989,12 +3670,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Gender]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Gender"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]">
+                      cachedName="Copy of Gender"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
                         <property
                           containsID="true"
@@ -3004,18 +3685,46 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Birth Year]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Birth Year"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Birth Year]">
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Birth Year]"
+                      cachedDataType="i4"
+                      cachedName="Copy of Birth Year"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birth Year]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of state"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3027,12 +3736,12 @@
                   name="Union All Input 3">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Id]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Id"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Id]">
+                      cachedName="Copy of Id"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]">
                       <properties>
                         <property
                           containsID="true"
@@ -3042,12 +3751,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Start Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Start Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -3057,12 +3766,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[End Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of End Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -3072,25 +3781,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Trip Duration]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Start Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Station]">
+                      cachedName="Copy of Start Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -3100,12 +3796,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[End Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of End Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Station]">
+                      cachedName="Copy of End Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -3115,12 +3811,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[User Type]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of User Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="User Type"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[User Type]">
+                      cachedName="Copy of User Type"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of User Type]">
                       <properties>
                         <property
                           containsID="true"
@@ -3130,12 +3826,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Gender]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Gender"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]">
+                      cachedName="Copy of Gender"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
                         <property
                           containsID="true"
@@ -3145,18 +3841,46 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Birth Year]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Birth Year"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Birth Year]">
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Birth Year]"
+                      cachedDataType="i4"
+                      cachedName="Copy of Birth Year"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birth Year]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of state"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3168,12 +3892,12 @@
                   name="Union All Input 4">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Id]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Id"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Id]">
+                      cachedName="Copy of Id"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]">
                       <properties>
                         <property
                           containsID="true"
@@ -3183,12 +3907,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Start Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Start Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      cachedName="Copy of Start Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -3198,12 +3922,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[End Time]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of End Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Time"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      cachedName="Copy of End Time"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
                       <properties>
                         <property
                           containsID="true"
@@ -3213,25 +3937,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Trip Duration]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Start Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Start Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Station]">
+                      cachedName="Copy of Start Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -3241,12 +3952,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[End Station]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of End Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="End Station"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Station]">
+                      cachedName="Copy of End Station"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Station]">
                       <properties>
                         <property
                           containsID="true"
@@ -3256,12 +3967,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[User Type]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of User Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="User Type"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[User Type]">
+                      cachedName="Copy of User Type"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of User Type]">
                       <properties>
                         <property
                           containsID="true"
@@ -3271,12 +3982,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Gender]"
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Gender"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]">
+                      cachedName="Copy of Gender"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
                         <property
                           containsID="true"
@@ -3286,18 +3997,46 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Birth Year]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Birth Year"
-                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Birth Year]">
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Birth Year]"
+                      cachedDataType="i4"
+                      cachedName="Copy of Birth Year"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birth Year]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copy of state"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of Trip Duration min"
+                      cachedPrecision="26"
+                      cachedScale="6"
+                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3338,11 +4077,6 @@
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]"
                       name="End Time" />
                     <outputColumn
-                      refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]"
-                      dataType="i8"
-                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration]"
-                      name="Trip Duration" />
-                    <outputColumn
                       refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Station]"
                       codePage="1252"
                       dataType="str"
@@ -3372,11 +4106,23 @@
                       name="Gender" />
                     <outputColumn
                       refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]"
                       name="Birth Year" />
+                    <outputColumn
+                      refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]"
+                      name="state" />
+                    <outputColumn
+                      refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]"
+                      dataType="numeric"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]"
+                      name="Trip Duration min"
+                      precision="26"
+                      scale="6" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3385,35 +4131,40 @@
           </components>
           <paths>
             <path
+              refId="Package\DWH.Paths[Data Conversion Output]"
+              endId="Package\DWH\Conditional Split 1.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\DWH\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
               refId="Package\DWH.Paths[Derived Column Output]"
               endId="Package\DWH\Conditional Split For Trip Duration.Inputs[Conditional Split Input]"
               name="Derived Column Output"
               startId="Package\DWH\Derived Column For String Functions.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output1]"
-              endId="Package\DWH\Conditional Split 1.Inputs[Conditional Split Input]"
+              endId="Package\DWH\Data Conversion.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\DWH\Derived Column 1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output2]"
               endId="Package\DWH\Union All.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 8 end 8.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 9 end 9.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output3]"
               endId="Package\DWH\Union All.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 9 end 8.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 8 end 9.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output4]"
               endId="Package\DWH\Union All.Inputs[Union All Input 3]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 8 end 9.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 9 end 8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output5]"
               endId="Package\DWH\Union All.Inputs[Union All Input 4]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 9 end 9.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 8 end 8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Duration less than or equal 10 minutes]"
               endId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input]"
@@ -3484,49 +4235,53 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="151,42"
-          Id="Package\DWH\Flat File Source"
-          TopLeft="580.75,112" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\DWH\Date start 9 end 8"
-          TopLeft="701,595" />
-        <NodeLayout
-          Size="251,42"
-          Id="Package\DWH\Derived Column For String Functions"
-          TopLeft="555,851" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\DWH\Conditional Split For Trip Duration"
-          TopLeft="561,951" />
-        <NodeLayout
-          Size="195,42"
-          Id="Package\DWH\Duration exceed 10 Mins"
-          TopLeft="897,1060" />
+          Size="163,42"
+          Id="Package\DWH\Derived Column 1"
+          TopLeft="585,215" />
         <NodeLayout
           Size="165,42"
           Id="Package\DWH\Date start 8 end 9"
           TopLeft="434,593" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\DWH\Derived Column 1"
-          TopLeft="582,327" />
-        <NodeLayout
-          Size="227,42"
-          Id="Package\DWH\Duration doesn't exceed 5 Mins"
-          TopLeft="268,1063" />
+          Size="239,42"
+          Id="Package\DWH\Conditional Split For Trip Duration"
+          TopLeft="561,951" />
         <NodeLayout
           Size="165,42"
-          Id="Package\DWH\Date start 8 end 8"
-          TopLeft="982,592" />
+          Id="Package\DWH\Date start 9 end 8"
+          TopLeft="701,595" />
         <NodeLayout
           Size="165,42"
           Id="Package\DWH\Date start 9 end 9"
           TopLeft="204,588" />
         <NodeLayout
+          Size="151,42"
+          Id="Package\DWH\Flat File Source"
+          TopLeft="580.75,112" />
+        <NodeLayout
+          Size="251,42"
+          Id="Package\DWH\Derived Column For String Functions"
+          TopLeft="555,851" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\DWH\Date start 8 end 8"
+          TopLeft="982,591" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\DWH\Duration exceed 10 Mins"
+          TopLeft="897,1060" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DWH\Data Conversion"
+          TopLeft="642,314" />
+        <NodeLayout
           Size="155,42"
           Id="Package\DWH\Conditional Split 1"
           TopLeft="613,467" />
+        <NodeLayout
+          Size="227,42"
+          Id="Package\DWH\Duration doesn't exceed 5 Mins"
+          TopLeft="267,1062" />
         <EdgeLayout
           Id="Package\DWH.Paths[Start 9 End 9]"
           TopLeft="646.4,509">
@@ -3595,7 +4350,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="9.45416015624998,43.4946543121882,59.3916796875,9.763671875"
+              BoundingBox="9.45416015625,43.4946543121882,59.3916796875,9.763671875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3641,34 +4396,68 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="329.9,83"
+              EndConnector="329.9,82"
               Start="0,0"
-              End="329.9,75.5">
+              End="329.9,74.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.9972948602344" />
+                    End="0,20.6961226330027" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.9972948602344"
-                    Point2="0,24.9972948602344"
-                    Point3="4,24.9972948602344" />
+                    Point1="0,20.6961226330027"
+                    Point2="0,24.6961226330027"
+                    Point3="4,24.6961226330027" />
                   <mssgle:LineSegment
-                    End="325.9,24.9972948602344" />
+                    End="325.9,24.6961226330027" />
                   <mssgle:CubicBezierSegment
-                    Point1="325.9,24.9972948602344"
-                    Point2="329.9,24.9972948602344"
-                    Point3="329.9,28.9972948602344" />
+                    Point1="325.9,24.6961226330027"
+                    Point2="329.9,24.6961226330027"
+                    Point3="329.9,28.6961226330027" />
                   <mssgle:LineSegment
-                    End="329.9,75.5" />
+                    End="329.9,74.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="135.25416015625,29.9972948602344,59.3916796875,9.763671875"
+              BoundingBox="135.25416015625,29.6961226330027,59.3916796875,9.763671875"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DWH.Paths[Flat File Source Output]"
+          TopLeft="656.25,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.25,61"
+              Start="0,0"
+              End="10.25,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.5"
+                    Point2="0,30.5"
+                    Point3="4,30.5" />
+                  <mssgle:LineSegment
+                    End="6.25,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.25,30.5"
+                    Point2="10.25,30.5"
+                    Point3="10.25,34.5" />
+                  <mssgle:LineSegment
+                    End="10.25,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3684,17 +4473,17 @@
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.0673316708228" />
+                    End="0,23.0673316708229" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.0673316708228"
-                    Point2="0,27.0673316708228"
-                    Point3="4,27.0673316708228" />
+                    Point1="0,23.0673316708229"
+                    Point2="0,27.0673316708229"
+                    Point3="4,27.0673316708229" />
                   <mssgle:LineSegment
-                    End="271.5,27.0673316708228" />
+                    End="271.5,27.0673316708229" />
                   <mssgle:CubicBezierSegment
-                    Point1="271.5,27.0673316708228"
-                    Point2="275.5,27.0673316708228"
-                    Point3="275.5,31.0673316708228" />
+                    Point1="271.5,27.0673316708229"
+                    Point2="275.5,27.0673316708229"
+                    Point3="275.5,31.0673316708229" />
                   <mssgle:LineSegment
                     End="275.5,59.5" />
                 </mssgle:SegmentCollection>
@@ -3703,7 +4492,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="67.892421875,32.0673316708228,139.71515625,9.7490234375"
+              BoundingBox="67.892421875,32.0673316708229,139.71515625,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3713,34 +4502,68 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-260.5,70"
+              EndConnector="-261.5,69"
               Start="0,0"
-              End="-260.5,62.5">
+              End="-261.5,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.2793017456358" />
+                    End="0,23.8753117206983" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.2793017456358"
-                    Point2="0,28.2793017456358"
-                    Point3="-4,28.2793017456358" />
+                    Point1="0,23.8753117206983"
+                    Point2="0,27.8753117206983"
+                    Point3="-4,27.8753117206983" />
                   <mssgle:LineSegment
-                    End="-256.5,28.2793017456358" />
+                    End="-257.5,27.8753117206983" />
                   <mssgle:CubicBezierSegment
-                    Point1="-256.5,28.2793017456358"
-                    Point2="-260.5,28.2793017456358"
-                    Point3="-260.5,32.2793017456358" />
+                    Point1="-257.5,27.8753117206983"
+                    Point2="-261.5,27.8753117206983"
+                    Point3="-261.5,31.8753117206983" />
                   <mssgle:LineSegment
-                    End="-260.5,62.5" />
+                    End="-261.5,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-216.597578125,33.2793017456358,172.69515625,11.609375"
+              BoundingBox="-217.097578125,32.8753117206983,172.69515625,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DWH.Paths[Derived Column Output1]"
+          TopLeft="666.5,257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="53.5,57"
+              Start="0,0"
+              End="53.5,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
+                  <mssgle:LineSegment
+                    End="49.5,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.5,28.5"
+                    Point2="53.5,28.5"
+                    Point3="53.5,32.5" />
+                  <mssgle:LineSegment
+                    End="53.5,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3766,31 +4589,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DWH.Paths[Derived Column Output1]"
-          TopLeft="659,369">
+          Id="Package\DWH.Paths[Data Conversion Output]"
+          TopLeft="720,356">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31.5,98"
+              EndConnector="-29.5,111"
               Start="0,0"
-              End="31.5,90.5">
+              End="-29.5,103.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45" />
+                    End="0,51.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,45"
-                    Point2="0,49"
-                    Point3="4,49" />
+                    Point1="0,51.5"
+                    Point2="0,55.5"
+                    Point3="-4,55.5" />
                   <mssgle:LineSegment
-                    End="27.5,49" />
+                    End="-25.5,55.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="27.5,49"
-                    Point2="31.5,49"
-                    Point3="31.5,53" />
+                    Point1="-25.5,55.5"
+                    Point2="-29.5,55.5"
+                    Point3="-29.5,59.5" />
                   <mssgle:LineSegment
-                    End="31.5,90.5" />
+                    End="-29.5,103.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3799,58 +4622,43 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DWH.Paths[Flat File Source Output]"
-          TopLeft="657.625,154">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,173"
-              Start="0,0"
-              End="0,165.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,165.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <AnnotationLayout
+          Text="0"
+          ParentId="Package\DWH"
+          FontInfo="{assembly:Null}"
+          Size="35,40"
+          Id="23a72185-b619-440d-9e80-96c90e67db3a"
+          TopLeft="1183,991" />
         <NodeLayout
           Size="121,42"
           Id="Package\DWH\Union All"
-          TopLeft="638.75,738.75" />
+          TopLeft="625,762" />
         <EdgeLayout
           Id="Package\DWH.Paths[Derived Column Output2]"
-          TopLeft="1064.5,634">
+          TopLeft="286.5,630">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-365.25,104.75"
+              EndConnector="399,132"
               Start="0,0"
-              End="-365.25,97.25">
+              End="399,124.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.375" />
+                    End="0,62" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,48.375"
-                    Point2="0,52.375"
-                    Point3="-4,52.375" />
+                    Point1="0,62"
+                    Point2="0,66"
+                    Point3="4,66" />
                   <mssgle:LineSegment
-                    End="-361.25,52.375" />
+                    End="395,66" />
                   <mssgle:CubicBezierSegment
-                    Point1="-361.25,52.375"
-                    Point2="-365.25,52.375"
-                    Point3="-365.25,56.375" />
+                    Point1="395,66"
+                    Point2="399,66"
+                    Point3="399,70" />
                   <mssgle:LineSegment
-                    End="-365.25,97.25" />
+                    End="399,124.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3861,30 +4669,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH.Paths[Derived Column Output3]"
-          TopLeft="783.5,637">
+          TopLeft="516.5,635">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-103.083333333333,101.75"
+              EndConnector="187.833333333333,127"
               Start="0,0"
-              End="-103.083333333333,94.25">
+              End="187.833333333333,119.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.2532626427406" />
+                    End="0,71.2055464926591" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,56.2532626427406"
-                    Point2="0,60.2532626427406"
-                    Point3="-4,60.2532626427406" />
+                    Point1="0,71.2055464926591"
+                    Point2="0,75.2055464926591"
+                    Point3="4,75.2055464926591" />
                   <mssgle:LineSegment
-                    End="-99.0833333333334,60.2532626427406" />
+                    End="183.833333333333,75.2055464926591" />
                   <mssgle:CubicBezierSegment
-                    Point1="-99.0833333333334,60.2532626427406"
-                    Point2="-103.083333333333,60.2532626427406"
-                    Point3="-103.083333333333,64.2532626427407" />
+                    Point1="183.833333333333,75.2055464926591"
+                    Point2="187.833333333333,75.2055464926591"
+                    Point3="187.833333333333,79.2055464926591" />
                   <mssgle:LineSegment
-                    End="-103.083333333333,94.25" />
+                    End="187.833333333333,119.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3895,30 +4703,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH.Paths[Derived Column Output4]"
-          TopLeft="516.5,635">
+          TopLeft="783.5,637">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="154.5,103.75"
+              EndConnector="-69.75,125"
               Start="0,0"
-              End="154.5,96.25">
+              End="-69.75,117.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.6752021563342" />
+                    End="0,77.5363881401617" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,63.6752021563342"
-                    Point2="0,67.6752021563342"
-                    Point3="4,67.6752021563342" />
+                    Point1="0,77.5363881401617"
+                    Point2="0,81.5363881401617"
+                    Point3="-4,81.5363881401617" />
                   <mssgle:LineSegment
-                    End="150.5,67.6752021563342" />
+                    End="-65.75,81.5363881401617" />
                   <mssgle:CubicBezierSegment
-                    Point1="150.5,67.6752021563342"
-                    Point2="154.5,67.6752021563342"
-                    Point3="154.5,71.6752021563342" />
+                    Point1="-65.75,81.5363881401617"
+                    Point2="-69.75,81.5363881401617"
+                    Point3="-69.75,85.5363881401617" />
                   <mssgle:LineSegment
-                    End="154.5,96.25" />
+                    End="-69.75,117.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3929,30 +4737,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH.Paths[Derived Column Output5]"
-          TopLeft="286.5,630">
+          TopLeft="1064.5,633">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="378.85,108.75"
+              EndConnector="-345.1,129"
               Start="0,0"
-              End="378.85,101.25">
+              End="-345.1,121.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.5381745120551" />
+                    End="0,85.6039035591274" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,71.5381745120551"
-                    Point2="0,75.5381745120551"
-                    Point3="4,75.5381745120551" />
+                    Point1="0,85.6039035591274"
+                    Point2="0,89.6039035591274"
+                    Point3="-4,89.6039035591274" />
                   <mssgle:LineSegment
-                    End="374.85,75.5381745120551" />
+                    End="-341.1,89.6039035591274" />
                   <mssgle:CubicBezierSegment
-                    Point1="374.85,75.5381745120551"
-                    Point2="378.85,75.5381745120551"
-                    Point3="378.85,79.5381745120551" />
+                    Point1="-341.1,89.6039035591274"
+                    Point2="-345.1,89.6039035591274"
+                    Point3="-345.1,93.6039035591274" />
                   <mssgle:LineSegment
-                    End="378.85,101.25" />
+                    End="-345.1,121.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3963,30 +4771,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH.Paths[Union All Output 1]"
-          TopLeft="699.25,780.75">
+          TopLeft="683,804">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.75,70.25"
+              EndConnector="0,47"
               Start="0,0"
-              End="-18.75,62.75">
+              End="0,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.125" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.125"
-                    Point2="0,35.125"
-                    Point3="-4,35.125" />
-                  <mssgle:LineSegment
-                    End="-14.75,35.125" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.75,35.125"
-                    Point2="-18.75,35.125"
-                    Point3="-18.75,39.125" />
-                  <mssgle:LineSegment
-                    End="-18.75,62.75" />
+                    End="0,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3998,5 +4794,31 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DWH\Duration exceed 10 Mins">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DWH\Duration doesn't exceed 5 Mins">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

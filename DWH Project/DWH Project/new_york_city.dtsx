@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="new_york_city"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{A89493F0-A34A-4EF0-964F-8789733E1C7D}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{B240E09E-944C-4688-961F-4FC7EA62EE3E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -38,6 +38,18 @@
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=A:\FCAI-HU\Four Stage\Second Term\DWH\new_york_city.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2F3C7D7A-E46B-4E76-9114-07DE707A4E6E}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=A:\FCAI-HU\Four Stage\Second Term\DWH\new_york_city.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -624,10 +636,11 @@
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH Excel\Conditional Split For Trip Duration.Inputs[Conditional Split Input].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration]" />
+                      refId="Package\DWH Excel\Conditional Split For Trip Duration.Inputs[Conditional Split Input].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="18"
+                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -647,13 +660,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration]} &gt; 600</property>
+                      name="Expression">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]} &gt; 10</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">[Trip Duration] &gt; 600</property>
+                      name="FriendlyExpression">[Trip Duration min] &gt; 10</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -675,13 +688,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration]} &lt;= 600</property>
+                      name="Expression">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]} &lt;= 10</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">[Trip Duration] &lt;= 600</property>
+                      name="FriendlyExpression">[Trip Duration min] &lt;= 10</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -957,7 +970,7 @@
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
+                      length="50"
                       lineageId="Package\DWH Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
                       name="Copy of Gender"
                       truncationRowDisposition="FailComponent">
@@ -1487,6 +1500,11 @@
                           name="FriendlyExpression">TRIM(LEFT([Copy of End Time],9))</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Derived Column.Inputs[Derived Column Input].Columns[Trip Duration]"
+                      cachedDataType="r8"
+                      cachedName="Trip Duration"
+                      lineageId="Package\DWH Excel\Excel Source.Outputs[Excel Source Output].Columns[Trip Duration]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1498,6 +1516,55 @@
                   exclusionGroup="1"
                   name="Derived Column Output"
                   synchronousInputId="Package\DWH Excel\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"New York"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"New York"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[Trip Duration min]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[Trip Duration min]"
+                      name="Trip Duration min"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DWH Excel\Excel Source.Outputs[Excel Source Output].Columns[Trip Duration]} / 60.0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Trip Duration] / 60.0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -1713,7 +1780,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Duration doesn't exceed 10 Mins]</property>
+                  name="OpenRowset">[dbo].[Bike Share Duration doesn't exceed 5 Mins]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1794,12 +1861,6 @@
                       externalMetadataColumnId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Time]"
                       lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[End Time]" />
                     <inputColumn
-                      refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      externalMetadataColumnId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration]" />
-                    <inputColumn
                       refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1864,6 +1925,21 @@
                       cachedName="REVERSEEnd Station"
                       externalMetadataColumnId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
                       lineageId="Package\DWH Excel\Derived Column For String Functions.Outputs[Derived Column Output].Columns[REVERSEEnd Station]" />
+                    <inputColumn
+                      refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]" />
+                    <inputColumn
+                      refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1886,36 +1962,32 @@
                       length="50"
                       name="End Time" />
                     <externalMetadataColumn
-                      refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      dataType="i8"
-                      name="Trip Duration" />
-                    <externalMetadataColumn
                       refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Start Station" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="End Station" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="User Type" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
-                      dataType="i8"
+                      dataType="i4"
                       name="Birth Year" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
@@ -1936,6 +2008,18 @@
                       dataType="wstr"
                       length="255"
                       name="REVERSEEnd Station" />
+                    <externalMetadataColumn
+                      refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\DWH Excel\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      dataType="numeric"
+                      name="Trip Duration min"
+                      precision="26"
+                      scale="6" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1980,7 +2064,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Duration exceed 10 Mins]</property>
+                  name="OpenRowset">[dbo].[Bike Share Duration exceed 10 Mins]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2061,12 +2145,6 @@
                       externalMetadataColumnId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Time]"
                       lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[End Time]" />
                     <inputColumn
-                      refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration]"
-                      cachedDataType="i8"
-                      cachedName="Trip Duration"
-                      externalMetadataColumnId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration]" />
-                    <inputColumn
                       refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2131,6 +2209,21 @@
                       cachedName="REVERSEEnd Station"
                       externalMetadataColumnId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
                       lineageId="Package\DWH Excel\Derived Column For String Functions.Outputs[Derived Column Output].Columns[REVERSEEnd Station]" />
+                    <inputColumn
+                      refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]" />
+                    <inputColumn
+                      refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2153,36 +2246,32 @@
                       length="50"
                       name="End Time" />
                     <externalMetadataColumn
-                      refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration]"
-                      dataType="i8"
-                      name="Trip Duration" />
-                    <externalMetadataColumn
                       refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Start Station" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="End Station" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="User Type" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
-                      dataType="i8"
+                      dataType="i4"
                       name="Birth Year" />
                     <externalMetadataColumn
                       refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
@@ -2203,6 +2292,18 @@
                       dataType="wstr"
                       length="255"
                       name="REVERSEEnd Station" />
+                    <externalMetadataColumn
+                      refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\DWH Excel\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      dataType="numeric"
+                      name="Trip Duration min"
+                      precision="26"
+                      scale="6" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2274,8 +2375,8 @@
               <connections>
                 <connection
                   refId="Package\DWH Excel\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2604,7 +2705,7 @@
                       refId="Package\DWH Excel\Union All.Inputs[Union All Input 1].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="Copy of Gender"
                       lineageId="Package\DWH Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
@@ -2626,6 +2727,35 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 1].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="State"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[State]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 1].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="18"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2743,7 +2873,7 @@
                       refId="Package\DWH Excel\Union All.Inputs[Union All Input 2].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="Copy of Gender"
                       lineageId="Package\DWH Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
@@ -2765,6 +2895,35 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 2].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="State"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[State]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 2].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="18"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2882,7 +3041,7 @@
                       refId="Package\DWH Excel\Union All.Inputs[Union All Input 3].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="Copy of Gender"
                       lineageId="Package\DWH Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
@@ -2904,6 +3063,35 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 3].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="State"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[State]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 3].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="18"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3021,7 +3209,7 @@
                       refId="Package\DWH Excel\Union All.Inputs[Union All Input 4].Columns[Copy of Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="Copy of Gender"
                       lineageId="Package\DWH Excel\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]">
                       <properties>
@@ -3043,6 +3231,35 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Birth Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 4].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="State"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[State]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH Excel\Union All.Inputs[Union All Input 4].Columns[Trip Duration min]"
+                      cachedDataType="numeric"
+                      cachedName="Trip Duration min"
+                      cachedPrecision="18"
+                      lineageId="Package\DWH Excel\Derived Column.Outputs[Derived Column Output].Columns[Trip Duration min]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3120,6 +3337,19 @@
                       dataType="i8"
                       lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Birth Year]"
                       name="Birth Year" />
+                    <outputColumn
+                      refId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]"
+                      dataType="numeric"
+                      lineageId="Package\DWH Excel\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]"
+                      name="Trip Duration min"
+                      precision="18" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3146,12 +3376,12 @@
               refId="Package\DWH Excel.Paths[Derived Column Output2]"
               endId="Package\DWH Excel\Union All.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DWH Excel\Date start 9 end 8.Outputs[Derived Column Output]" />
+              startId="Package\DWH Excel\Date start 8 end 8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH Excel.Paths[Derived Column Output3]"
               endId="Package\DWH Excel\Union All.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DWH Excel\Date start 8 end 8.Outputs[Derived Column Output]" />
+              startId="Package\DWH Excel\Date start 9 end 8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH Excel.Paths[Derived Column Output4]"
               endId="Package\DWH Excel\Union All.Inputs[Union All Input 3]"
@@ -3232,10 +3462,6 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="121,42"
-          Id="Package\DWH Excel\Union All"
-          TopLeft="529,710" />
-        <NodeLayout
           Size="165,42"
           Id="Package\DWH Excel\Date start 9 end 8"
           TopLeft="628,572" />
@@ -3283,40 +3509,6 @@
           Size="155,42"
           Id="Package\DWH Excel\Conditional Split"
           TopLeft="540,444" />
-        <EdgeLayout
-          Id="Package\DWH Excel.Paths[Union All Output 1]"
-          TopLeft="589.5,752">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="18,76"
-              Start="0,0"
-              End="18,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34"
-                    Point2="0,38"
-                    Point3="4,38" />
-                  <mssgle:LineSegment
-                    End="14,38" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14,38"
-                    Point2="18,38"
-                    Point3="18,42" />
-                  <mssgle:LineSegment
-                    End="18,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH Excel.Paths[Start 9 End 9]"
           TopLeft="573.4,486">
@@ -3568,142 +3760,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DWH Excel.Paths[Derived Column Output5]"
-          TopLeft="213.5,607">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="342.1,103"
-              Start="0,0"
-              End="342.1,95.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.5442020665901" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,67.5442020665901"
-                    Point2="0,71.5442020665901"
-                    Point3="4,71.5442020665901" />
-                  <mssgle:LineSegment
-                    End="338.1,71.5442020665901" />
-                  <mssgle:CubicBezierSegment
-                    Point1="338.1,71.5442020665901"
-                    Point2="342.1,71.5442020665901"
-                    Point3="342.1,75.5442020665901" />
-                  <mssgle:LineSegment
-                    End="342.1,95.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DWH Excel.Paths[Derived Column Output4]"
-          TopLeft="443.5,612">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134.7,98"
-              Start="0,0"
-              End="134.7,90.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.0474020054694" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50.0474020054694"
-                    Point2="0,54.0474020054694"
-                    Point3="4,54.0474020054694" />
-                  <mssgle:LineSegment
-                    End="130.7,54.0474020054694" />
-                  <mssgle:CubicBezierSegment
-                    Point1="130.7,54.0474020054694"
-                    Point2="134.7,54.0474020054694"
-                    Point3="134.7,58.0474020054694" />
-                  <mssgle:LineSegment
-                    End="134.7,90.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DWH Excel.Paths[Derived Column Output3]"
-          TopLeft="991.5,611">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-368.1,99"
-              Start="0,0"
-              End="-368.1,91.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,64.7657864523536" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,64.7657864523536"
-                    Point2="0,68.7657864523536"
-                    Point3="-4,68.7657864523536" />
-                  <mssgle:LineSegment
-                    End="-364.1,68.7657864523536" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-364.1,68.7657864523536"
-                    Point2="-368.1,68.7657864523536"
-                    Point3="-368.1,72.7657864523536" />
-                  <mssgle:LineSegment
-                    End="-368.1,91.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DWH Excel.Paths[Derived Column Output2]"
-          TopLeft="710.5,614">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-109.7,96"
-              Start="0,0"
-              End="-109.7,88.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.9443938012762" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,48.9443938012762"
-                    Point2="0,52.9443938012762"
-                    Point3="-4,52.9443938012762" />
-                  <mssgle:LineSegment
-                    End="-105.7,52.9443938012762" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-105.7,52.9443938012762"
-                    Point2="-109.7,52.9443938012762"
-                    Point3="-109.7,56.9443938012762" />
-                  <mssgle:LineSegment
-                    End="-109.7,88.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DWH Excel.Paths[Derived Column Output1]"
           TopLeft="607.5,870">
           <EdgeLayout.Curve>
@@ -3785,6 +3841,180 @@
                     Point3="31,60" />
                   <mssgle:LineSegment
                     End="31,104.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\DWH Excel\Union All"
+          TopLeft="537,739" />
+        <EdgeLayout
+          Id="Package\DWH Excel.Paths[Derived Column Output2]"
+          TopLeft="991.5,611">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-360.1,128"
+              Start="0,0"
+              End="-360.1,120.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.9092996555683" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,84.9092996555683"
+                    Point2="0,88.9092996555683"
+                    Point3="-4,88.9092996555683" />
+                  <mssgle:LineSegment
+                    End="-356.1,88.9092996555683" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-356.1,88.9092996555683"
+                    Point2="-360.1,88.9092996555683"
+                    Point3="-360.1,92.9092996555683" />
+                  <mssgle:LineSegment
+                    End="-360.1,120.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DWH Excel.Paths[Derived Column Output3]"
+          TopLeft="710.5,614">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-101.7,125"
+              Start="0,0"
+              End="-101.7,117.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.9380127620784" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,64.9380127620784"
+                    Point2="0,68.9380127620784"
+                    Point3="-4,68.9380127620784" />
+                  <mssgle:LineSegment
+                    End="-97.7,68.9380127620784" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-97.7,68.9380127620784"
+                    Point2="-101.7,68.9380127620784"
+                    Point3="-101.7,72.9380127620784" />
+                  <mssgle:LineSegment
+                    End="-101.7,117.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DWH Excel.Paths[Derived Column Output4]"
+          TopLeft="443.5,612">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.7,127"
+              Start="0,0"
+              End="142.7,119.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.0410209662716" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,66.0410209662716"
+                    Point2="0,70.0410209662716"
+                    Point3="4,70.0410209662716" />
+                  <mssgle:LineSegment
+                    End="138.7,70.0410209662716" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138.7,70.0410209662716"
+                    Point2="142.7,70.0410209662716"
+                    Point3="142.7,74.0410209662716" />
+                  <mssgle:LineSegment
+                    End="142.7,119.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DWH Excel.Paths[Derived Column Output5]"
+          TopLeft="213.5,607">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="350.1,132"
+              Start="0,0"
+              End="350.1,124.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.6877152698048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.6877152698048"
+                    Point2="0,91.6877152698048"
+                    Point3="4,91.6877152698048" />
+                  <mssgle:LineSegment
+                    End="346.1,91.6877152698048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="346.1,91.6877152698048"
+                    Point2="350.1,91.6877152698048"
+                    Point3="350.1,95.6877152698048" />
+                  <mssgle:LineSegment
+                    End="350.1,124.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DWH Excel.Paths[Union All Output 1]"
+          TopLeft="597.5,781">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10,47"
+              Start="0,0"
+              End="10,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="6,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6,23.5"
+                    Point2="10,23.5"
+                    Point3="10,27.5" />
+                  <mssgle:LineSegment
+                    End="10,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
