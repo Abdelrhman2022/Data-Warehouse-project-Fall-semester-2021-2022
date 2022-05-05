@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Cicago"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{003DB64D-C7CD-4B57-B000-E582929CA94E}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{E12D36B5-B7DD-4E6D-B4AB-DD549A6A4C7A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2531,11 +2531,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\DWH\Duration doesn't exceed 5 Mins"
+              refId="Package\DWH\Duration doesn't exceed 10 Mins"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Duration doesn't exceed 5 Mins"
+              name="Duration doesn't exceed 10 Mins"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2546,7 +2546,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Bike Share Duration doesn't exceed 5 Mins]</property>
+                  name="OpenRowset">[dbo].[Bike Share Duration doesn't exceed 10 Mins]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2588,7 +2588,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DWH\Duration doesn't exceed 5 Mins.Connections[OleDbConnection]"
+                  refId="Package\DWH\Duration doesn't exceed 10 Mins.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-2KE31CA.DWH]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-2KE31CA.DWH]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2596,218 +2596,194 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input]"
+                  refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Id]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Id"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Start Time]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Start Time]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Start Time"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Time]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Time]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[End Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="End Time"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Time]"
-                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]" />
-                    <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Start Station]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Start Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Start Station"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Station]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[End Station]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[End Station]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="End Station"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Station]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[User Type]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[User Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="User Type"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[User Type]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Gender"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Gender]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Birth Year]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Birth Year]"
                       cachedDataType="i4"
                       cachedName="Birth Year"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Birth Year]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[LEFT Gender]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[LEFT Gender]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="LEFT Gender"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
                       lineageId="Package\DWH\Derived Column For String Functions.Outputs[Derived Column Output].Columns[LEFT Gender]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[LenStartStation]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[LenStartStation]"
                       cachedDataType="i4"
                       cachedName="LenStartStation"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LenStartStation]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LenStartStation]"
                       lineageId="Package\DWH\Derived Column For String Functions.Outputs[Derived Column Output].Columns[LenStartStation]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[UPPERUserType]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[UPPERUserType]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="UPPERUserType"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[UPPERUserType]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[UPPERUserType]"
                       lineageId="Package\DWH\Derived Column For String Functions.Outputs[Derived Column Output].Columns[UPPERUserType]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[REVERSEEnd Station]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[REVERSEEnd Station]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="REVERSEEnd Station"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
                       lineageId="Package\DWH\Derived Column For String Functions.Outputs[Derived Column Output].Columns[REVERSEEnd Station]" />
                     <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[state]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="state"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[state]"
-                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[state]" />
-                    <inputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration min]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].Columns[Trip Duration min]"
                       cachedDataType="numeric"
                       cachedName="Trip Duration min"
                       cachedPrecision="26"
                       cachedScale="6"
-                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      externalMetadataColumnId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Trip Duration min]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Id" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Time]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Time]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Start Time" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="End Time" />
-                    <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Start Station]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Start Station" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[End Station]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="End Station" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[User Type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="User Type" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Gender" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
-                      dataType="i4"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
+                      dataType="i8"
                       name="Birth Year" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
                       dataType="wstr"
                       length="1"
                       name="LEFT Gender" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LenStartStation]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LenStartStation]"
                       dataType="i4"
                       name="LenStartStation" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[UPPERUserType]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[UPPERUserType]"
                       dataType="wstr"
                       length="255"
                       name="UPPERUserType" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[REVERSEEnd Station]"
                       dataType="wstr"
                       length="255"
                       name="REVERSEEnd Station" />
                     <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
+                      dataType="r4"
+                      name="Trip Duration min" />
+                    <externalMetadataColumn
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[State]"
                       codePage="1252"
                       dataType="str"
                       length="20"
-                      name="state" />
-                    <externalMetadataColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
-                      dataType="numeric"
-                      name="Trip Duration min"
-                      precision="26"
-                      scale="6" />
+                      name="State" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DWH\Duration doesn't exceed 5 Mins.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\DWH\Duration doesn't exceed 10 Mins.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DWH\Duration doesn't exceed 5 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DWH\Duration doesn't exceed 10 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DWH\Duration doesn't exceed 5 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\DWH\Duration doesn't exceed 10 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DWH\Duration doesn't exceed 5 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DWH\Duration doesn't exceed 10 Mins.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3039,7 +3015,7 @@
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Birth Year]"
-                      dataType="i4"
+                      dataType="i8"
                       name="Birth Year" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[LEFT Gender]"
@@ -3062,10 +3038,8 @@
                       name="REVERSEEnd Station" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[Trip Duration min]"
-                      dataType="numeric"
-                      name="Trip Duration min"
-                      precision="26"
-                      scale="6" />
+                      dataType="r4"
+                      name="Trip Duration min" />
                     <externalMetadataColumn
                       refId="Package\DWH\Duration exceed 10 Mins.Inputs[OLE DB Destination Input].ExternalColumns[State]"
                       codePage="1252"
@@ -3424,6 +3398,36 @@
                   name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -3436,36 +3440,6 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of Start Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of Start Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 1].Columns[Copy of End Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of End Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3580,6 +3554,36 @@
                   name="Union All Input 2">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -3592,36 +3596,6 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of Start Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of Start Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 2].Columns[Copy of End Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of End Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3736,6 +3710,36 @@
                   name="Union All Input 3">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -3748,36 +3752,6 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of Start Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of Start Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 3].Columns[Copy of End Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of End Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3892,6 +3866,36 @@
                   name="Union All Input 4">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Start Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[Start Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[End Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End Time"
+                      lineageId="Package\DWH\Flat File Source.Outputs[Flat File Source Output].Columns[End Time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -3904,36 +3908,6 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of Start Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of Start Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DWH\Union All.Inputs[Union All Input 4].Columns[Copy of End Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of End Time"
-                      lineageId="Package\DWH\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of End Time]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4056,13 +4030,6 @@
                   name="Union All Output 1">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]"
-                      name="Id" />
-                    <outputColumn
                       refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Time]"
                       codePage="1252"
                       dataType="str"
@@ -4076,6 +4043,13 @@
                       length="50"
                       lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[End Time]"
                       name="End Time" />
+                    <outputColumn
+                      refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Id]"
+                      name="Id" />
                     <outputColumn
                       refId="Package\DWH\Union All.Outputs[Union All Output 1].Columns[Start Station]"
                       codePage="1252"
@@ -4149,25 +4123,25 @@
               refId="Package\DWH.Paths[Derived Column Output2]"
               endId="Package\DWH\Union All.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 9 end 9.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 8 end 8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output3]"
               endId="Package\DWH\Union All.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 8 end 9.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 9 end 8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output4]"
               endId="Package\DWH\Union All.Inputs[Union All Input 3]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 9 end 8.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 8 end 9.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Derived Column Output5]"
               endId="Package\DWH\Union All.Inputs[Union All Input 4]"
               name="Derived Column Output"
-              startId="Package\DWH\Date start 8 end 8.Outputs[Derived Column Output]" />
+              startId="Package\DWH\Date start 9 end 9.Outputs[Derived Column Output]" />
             <path
               refId="Package\DWH.Paths[Duration less than or equal 10 minutes]"
-              endId="Package\DWH\Duration doesn't exceed 5 Mins.Inputs[OLE DB Destination Input]"
+              endId="Package\DWH\Duration doesn't exceed 10 Mins.Inputs[OLE DB Destination Input]"
               name="Duration less than or equal 10 minutes"
               startId="Package\DWH\Conditional Split For Trip Duration.Outputs[Duration less than or equal 10 minutes]" />
             <path
@@ -4241,7 +4215,7 @@
         <NodeLayout
           Size="165,42"
           Id="Package\DWH\Date start 8 end 9"
-          TopLeft="434,593" />
+          TopLeft="431.142857142857,605.857142857143" />
         <NodeLayout
           Size="239,42"
           Id="Package\DWH\Conditional Split For Trip Duration"
@@ -4265,11 +4239,11 @@
         <NodeLayout
           Size="165,42"
           Id="Package\DWH\Date start 8 end 8"
-          TopLeft="982,591" />
+          TopLeft="983.428571428572,591" />
         <NodeLayout
           Size="195,42"
           Id="Package\DWH\Duration exceed 10 Mins"
-          TopLeft="897,1060" />
+          TopLeft="895.571428571429,1061.42857142857" />
         <NodeLayout
           Size="156,42"
           Id="Package\DWH\Data Conversion"
@@ -4279,8 +4253,8 @@
           Id="Package\DWH\Conditional Split 1"
           TopLeft="613,467" />
         <NodeLayout
-          Size="227,42"
-          Id="Package\DWH\Duration doesn't exceed 5 Mins"
+          Size="232,42"
+          Id="Package\DWH\Duration doesn't exceed 10 Mins"
           TopLeft="267,1062" />
         <EdgeLayout
           Id="Package\DWH.Paths[Start 9 End 9]"
@@ -4360,33 +4334,33 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-159.3,84"
+              EndConnector="-162.157142857143,96.8571428571429"
               Start="0,0"
-              End="-159.3,76.5">
+              End="-162.157142857143,89.3571428571429">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.5994297933001" />
+                    End="0,39.3544445575807" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.5994297933001"
-                    Point2="0,37.5994297933001"
-                    Point3="-4,37.5994297933001" />
+                    Point1="0,39.3544445575807"
+                    Point2="0,43.3544445575807"
+                    Point3="-4,43.3544445575807" />
                   <mssgle:LineSegment
-                    End="-155.3,37.5994297933001" />
+                    End="-158.157142857143,43.3544445575807" />
                   <mssgle:CubicBezierSegment
-                    Point1="-155.3,37.5994297933001"
-                    Point2="-159.3,37.5994297933001"
-                    Point3="-159.3,41.5994297933001" />
+                    Point1="-158.157142857143,43.3544445575807"
+                    Point2="-162.157142857143,43.3544445575807"
+                    Point3="-162.157142857143,47.3544445575807" />
                   <mssgle:LineSegment
-                    End="-159.3,76.5" />
+                    End="-162.157142857143,89.3571428571429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-109.318984375,42.5994297933001,59.33796875,9.763671875"
+              BoundingBox="-110.747555803571,48.3544445575807,59.33796875,9.763671875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4396,9 +4370,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="329.9,82"
+              EndConnector="331.328571428572,82"
               Start="0,0"
-              End="329.9,74.5">
+              End="331.328571428572,74.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4409,20 +4383,20 @@
                     Point2="0,24.6961226330027"
                     Point3="4,24.6961226330027" />
                   <mssgle:LineSegment
-                    End="325.9,24.6961226330027" />
+                    End="327.328571428572,24.6961226330027" />
                   <mssgle:CubicBezierSegment
-                    Point1="325.9,24.6961226330027"
-                    Point2="329.9,24.6961226330027"
-                    Point3="329.9,28.6961226330027" />
+                    Point1="327.328571428572,24.6961226330027"
+                    Point2="331.328571428572,24.6961226330027"
+                    Point3="331.328571428572,28.6961226330027" />
                   <mssgle:LineSegment
-                    End="329.9,74.5" />
+                    End="331.328571428572,74.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="135.25416015625,29.6961226330027,59.3916796875,9.763671875"
+              BoundingBox="135.968445870536,29.6961226330027,59.3916796875,9.763671875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4466,33 +4440,33 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="275.5,67"
+              EndConnector="274.071428571429,68.4285714285716"
               Start="0,0"
-              End="275.5,59.5">
+              End="274.071428571429,60.9285714285716">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.0673316708229" />
+                    End="0,23.6444602778768" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.0673316708229"
-                    Point2="0,27.0673316708229"
-                    Point3="4,27.0673316708229" />
+                    Point1="0,23.6444602778768"
+                    Point2="0,27.6444602778768"
+                    Point3="4,27.6444602778768" />
                   <mssgle:LineSegment
-                    End="271.5,27.0673316708229" />
+                    End="270.071428571429,27.6444602778768" />
                   <mssgle:CubicBezierSegment
-                    Point1="271.5,27.0673316708229"
-                    Point2="275.5,27.0673316708229"
-                    Point3="275.5,31.0673316708229" />
+                    Point1="270.071428571429,27.6444602778768"
+                    Point2="274.071428571429,27.6444602778768"
+                    Point3="274.071428571429,31.6444602778768" />
                   <mssgle:LineSegment
-                    End="275.5,59.5" />
+                    End="274.071428571429,60.9285714285716" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="67.892421875,32.0673316708229,139.71515625,9.7490234375"
+              BoundingBox="67.1781361607143,32.6444602778768,139.71515625,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4502,9 +4476,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-261.5,69"
+              EndConnector="-259,69"
               Start="0,0"
-              End="-261.5,61.5">
+              End="-259,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4515,20 +4489,20 @@
                     Point2="0,27.8753117206983"
                     Point3="-4,27.8753117206983" />
                   <mssgle:LineSegment
-                    End="-257.5,27.8753117206983" />
+                    End="-255,27.8753117206983" />
                   <mssgle:CubicBezierSegment
-                    Point1="-257.5,27.8753117206983"
-                    Point2="-261.5,27.8753117206983"
-                    Point3="-261.5,31.8753117206983" />
+                    Point1="-255,27.8753117206983"
+                    Point2="-259,27.8753117206983"
+                    Point3="-259,31.8753117206983" />
                   <mssgle:LineSegment
-                    End="-261.5,61.5" />
+                    End="-259,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-217.097578125,32.8753117206983,172.69515625,11.609375"
+              BoundingBox="-215.847578125,32.8753117206983,172.69515625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4632,33 +4606,67 @@
         <NodeLayout
           Size="121,42"
           Id="Package\DWH\Union All"
-          TopLeft="625,762" />
+          TopLeft="610,731.428571428571" />
         <EdgeLayout
-          Id="Package\DWH.Paths[Derived Column Output2]"
-          TopLeft="286.5,630">
+          Id="Package\DWH.Paths[Union All Output 1]"
+          TopLeft="670.5,773.428571428571">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="399,132"
+              EndConnector="9.99999999999989,77.5714285714286"
               Start="0,0"
-              End="399,124.5">
+              End="9.99999999999989,70.0714285714286">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,62" />
+                    End="0,34.7857142857143" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,62"
-                    Point2="0,66"
-                    Point3="4,66" />
+                    Point1="0,34.7857142857143"
+                    Point2="0,38.7857142857143"
+                    Point3="4,38.7857142857143" />
                   <mssgle:LineSegment
-                    End="395,66" />
+                    End="5.99999999999989,38.7857142857143" />
                   <mssgle:CubicBezierSegment
-                    Point1="395,66"
-                    Point2="399,66"
-                    Point3="399,70" />
+                    Point1="5.99999999999989,38.7857142857143"
+                    Point2="9.99999999999989,38.7857142857143"
+                    Point3="9.99999999999989,42.7857142857143" />
                   <mssgle:LineSegment
-                    End="399,124.5" />
+                    End="9.99999999999989,70.0714285714286" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DWH.Paths[Derived Column Output2]"
+          TopLeft="1065.92857142857,633">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-395.428571428571,98.4285714285714"
+              Start="0,0"
+              End="-395.428571428571,90.9285714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.2142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.2142857142857"
+                    Point2="0,49.2142857142857"
+                    Point3="-4,49.2142857142857" />
+                  <mssgle:LineSegment
+                    End="-391.428571428571,49.2142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-391.428571428571,49.2142857142857"
+                    Point2="-395.428571428571,49.2142857142857"
+                    Point3="-395.428571428571,53.2142857142857" />
+                  <mssgle:LineSegment
+                    End="-395.428571428571,90.9285714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4669,30 +4677,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH.Paths[Derived Column Output3]"
-          TopLeft="516.5,635">
+          TopLeft="783.5,637">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="187.833333333333,127"
+              EndConnector="-131.833333333333,94.4285714285714"
               Start="0,0"
-              End="187.833333333333,119.5">
+              End="-131.833333333333,86.9285714285714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.2055464926591" />
+                    End="0,51.9177347937544" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,71.2055464926591"
-                    Point2="0,75.2055464926591"
-                    Point3="4,75.2055464926591" />
+                    Point1="0,51.9177347937544"
+                    Point2="0,55.9177347937544"
+                    Point3="-4,55.9177347937544" />
                   <mssgle:LineSegment
-                    End="183.833333333333,75.2055464926591" />
+                    End="-127.833333333333,55.9177347937544" />
                   <mssgle:CubicBezierSegment
-                    Point1="183.833333333333,75.2055464926591"
-                    Point2="187.833333333333,75.2055464926591"
-                    Point3="187.833333333333,79.2055464926591" />
+                    Point1="-127.833333333333,55.9177347937544"
+                    Point2="-131.833333333333,55.9177347937544"
+                    Point3="-131.833333333333,59.9177347937544" />
                   <mssgle:LineSegment
-                    End="187.833333333333,119.5" />
+                    End="-131.833333333333,86.9285714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4703,30 +4711,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH.Paths[Derived Column Output4]"
-          TopLeft="783.5,637">
+          TopLeft="513.642857142857,647.857142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-69.75,125"
+              EndConnector="128.607142857143,83.5714285714286"
               Start="0,0"
-              End="-69.75,117.5">
+              End="128.607142857143,76.0714285714286">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,77.5363881401617" />
+                    End="0,50.5128994994224" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,77.5363881401617"
-                    Point2="0,81.5363881401617"
-                    Point3="-4,81.5363881401617" />
+                    Point1="0,50.5128994994224"
+                    Point2="0,54.5128994994224"
+                    Point3="4,54.5128994994224" />
                   <mssgle:LineSegment
-                    End="-65.75,81.5363881401617" />
+                    End="124.607142857143,54.5128994994224" />
                   <mssgle:CubicBezierSegment
-                    Point1="-65.75,81.5363881401617"
-                    Point2="-69.75,81.5363881401617"
-                    Point3="-69.75,85.5363881401617" />
+                    Point1="124.607142857143,54.5128994994224"
+                    Point2="128.607142857143,54.5128994994224"
+                    Point3="128.607142857143,58.5128994994224" />
                   <mssgle:LineSegment
-                    End="-69.75,117.5" />
+                    End="128.607142857143,76.0714285714286" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4737,52 +4745,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH.Paths[Derived Column Output5]"
-          TopLeft="1064.5,633">
+          TopLeft="286.5,630">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-345.1,129"
+              EndConnector="350.1,101.428571428571"
               Start="0,0"
-              End="-345.1,121.5">
+              End="350.1,93.9285714285714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,85.6039035591274" />
+                    End="0,66.4526816467115" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,85.6039035591274"
-                    Point2="0,89.6039035591274"
-                    Point3="-4,89.6039035591274" />
+                    Point1="0,66.4526816467115"
+                    Point2="0,70.4526816467115"
+                    Point3="4,70.4526816467115" />
                   <mssgle:LineSegment
-                    End="-341.1,89.6039035591274" />
+                    End="346.1,70.4526816467115" />
                   <mssgle:CubicBezierSegment
-                    Point1="-341.1,89.6039035591274"
-                    Point2="-345.1,89.6039035591274"
-                    Point3="-345.1,93.6039035591274" />
+                    Point1="346.1,70.4526816467115"
+                    Point2="350.1,70.4526816467115"
+                    Point3="350.1,74.4526816467115" />
                   <mssgle:LineSegment
-                    End="-345.1,121.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DWH.Paths[Union All Output 1]"
-          TopLeft="683,804">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47"
-              Start="0,0"
-              End="0,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.5" />
+                    End="350.1,93.9285714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4808,7 +4794,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DWH\Duration doesn't exceed 5 Mins">
+    design-time-name="Package\DWH\Duration doesn't exceed 10 Mins">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
