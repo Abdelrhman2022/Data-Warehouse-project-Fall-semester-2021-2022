@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>DWH Project</Name>
-    <LastWriteTime>2022-05-04T18:13:01.1001658Z</LastWriteTime>
+    <LastWriteTime>2022-05-07T22:08:24.8641546Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>new_york_city.dtsx</Name>
-      <LastWriteTime>2022-05-05T13:32:22.4281511Z</LastWriteTime>
+      <LastWriteTime>2022-05-09T18:05:37.076409Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Cicago.dtsx</Name>
-      <LastWriteTime>2022-05-05T13:45:12.4656532Z</LastWriteTime>
+      <Name>Chicago.dtsx</Name>
+      <LastWriteTime>2022-05-09T18:06:31.3893207Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
