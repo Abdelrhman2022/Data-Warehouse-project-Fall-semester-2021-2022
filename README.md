@@ -1,6 +1,10 @@
 # Data Warehouse project Fall semester 2021-2022
  SSIS Project and Creatie a Dashboard using Power bi
  
+# Dashboard
+
+![Dashboard](https://github.com/Abdelrhman2022/Data-Warehouse-project-Fall-semester-2021-2022/blob/main/Dashboard.PNG)
+ 
  # Dataset 
  
 Bike-sharing systems are a means of renting bicycles where the process of obtaining membership, rental, and bike return is automated via a network of kiosk locations throughout a city. Using these systems, people are able rent a bike from one location and return it to a different place on an as-needed basis. Currently, there are over 500 bike-sharing programs around the world.
