@@ -1,5 +1,5 @@
 # Data Warehouse project Fall semester 2021-2022
- SSIS Project and Creatie a Dashboard using Power bi
+ SSIS Project then Create a Dashboard using Power bi
  
 # Dashboard
 
