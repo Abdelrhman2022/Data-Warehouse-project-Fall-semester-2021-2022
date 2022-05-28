@@ -1,9 +1,6 @@
 # Data Warehouse project Fall semester 2021-2022
  SSIS Project then Create a Dashboard using Power bi
  
-# Dashboard
-
-![Dashboard](https://github.com/Abdelrhman2022/Data-Warehouse-project-Fall-semester-2021-2022/blob/main/Dashboard.PNG)
  
  # Dataset 
  
@@ -22,3 +19,6 @@ Randomly selected data for the first six months of 2017 are provided for all two
  -	Gender (Male, Female)
  -	Birth Year (1998, 1981)
 
+# Dashboard
+
+![Dashboard](https://github.com/Abdelrhman2022/Data-Warehouse-project-Fall-semester-2021-2022/blob/main/Dashboard.PNG)
