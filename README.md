@@ -1,7 +1,5 @@
 # Data Warehouse project Fall semester 2021-2022
- SSIS Project then Create a Dashboard using Power bi
- 
- 
+  
  # Dataset 
  
 Bike-sharing systems are a means of renting bicycles where the process of obtaining membership, rental, and bike return is automated via a network of kiosk locations throughout a city. Using these systems, people are able rent a bike from one location and return it to a different place on an as-needed basis. Currently, there are over 500 bike-sharing programs around the world.
@@ -18,6 +16,14 @@ Randomly selected data for the first six months of 2017 are provided for all two
  -	User Type (Subscriber or Customer)
  -	Gender (Male, Female)
  -	Birth Year (1998, 1981)
+
+# SSIS Steps
+
+1. Change the data type of any Dates you have to a string in addition to you should convert the format of any Dates you have to be in this format which is MM-DD-YYYY.
+2. Apply some of string functions on any columns you want, and these functions are (Upper, Len, Left, Reverse) you must apply all of these functions.
+3. Apply conditional split and you are free to choose any the condition you want to split data. All these point from 2,3,4 should be applied on the two files.
+4. You should have one destination that contain two tables each table will have data that meet the condition.
+5. Creating a Dashboard for only one destination table. Dashboard contains a multiple-type charts minimum four different types of visualization(charts).
 
 # Dashboard
 
